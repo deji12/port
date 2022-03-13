@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    {% load static %}
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#blogs">blogs</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <img class="tilt" src="{% static 'img/tpg.jpg' %}" alt="">
+        <h3> Ayodeji <span>Adesola</span> </h3>
+        <p> i am a <span class="typing-text"> back end developer </span> </p>
+        <a href="#about" class="btn">about me</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> about <span>me</span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="{% static 'img/tpg.jpg' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h3> my name is <span> Ayodeji Adesola </span> </h3>
+            <p class="info">I am a backend developer and tech youtuber who works with python/django. I have experience working with various technologies like: python, django, Git, Github, AWS s3 buckets, postgresql, heroku, html, css and more. </p>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> age: </span> 18 </p>
+                    <p> <span> gender: </span> male </p>
+                    <p> <span> experience  : </span> 1 year </p>
+                    <p> <span> freelance : </span> available </p>
+                </div>
+                <div class="box">
+                    <p> <span> language : </span> python / django </p>
+                    <p> <span> phone : </span> +90-533-842-3485 </p>
+                    <p> <span> email : </span> theprotonguy@yahoo.com </p>
+                    <p> <span> address : </span> Girne, Cyprus </p>
+                </div>
+            </div>
+            {% for i in file %}
+                <a href="{{i.file.url}}" class="btn">download CV</a>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> <span> my </span> services </h1>
+
+    <div class="box-container">
+
+        <div class="box tilt">
+            <i class="fas fa-code"></i>
+            <h3>Backend web development</h3>
+            <p>I build scallable and efficient backends for my clients.</p>
+        </div>
+
+        <!-- <div class="box tilt">
+            <i class="fas fa-paint-brush"></i>
+            <h3>graphic design</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div> -->
+
+        <!-- <div class="box tilt">
+            <i class="fas fa-bullhorn"></i>
+            <h3>seo marketing</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div> -->
+
+        <!-- <div class="box tilt">
+            <i class="fas fa-envelope"></i>
+            <h3>email marketing</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div> -->
+
+        <div class="box tilt">
+            <i class="fas fa-code"></i>
+            <h3>API Development</h3>
+            <p>I recognize the importance of API's as third party services and i build API's that handle data exchange/CRUD operations exceptionally </p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fab fa-wordpress"></i>
+            <h3>wordpress</h3>
+            <p>I also build websites using the wordpress CMS</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+    <h1 class="heading"> <span> my </span> portfolio </h1>
+
+    <div class="box-container">
+
+        <div class="box tilt">
+            <img src="{% static 'img/blog.png' %}" alt="">
+            <div class="content">
+                <a href="http://theprotonblog.herokuapp.com/" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box tilt">
+            <img src="{% static 'img/scr1.png' %}" alt="">
+            <div class="content">
+                <a href="http://todoappdj.herokuapp.com/" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box tilt">
+            <img src="{% static 'img/port.png' %}" alt="">
+            <div class="content">
+                <a href="http://theprotonguy.herokuapp.com/" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box tilt">
+            <img src="{% static 'img/scr5.png' %}" alt="">
+            <div class="content">
+                <a href="https://www.tremvic.org/" class="btn">learn more</a>
+            </div>
+        </div>
+
+        <div class="box tilt">
+            <img src="{% static 'img/2.png' %}" alt="">
+            <div class="content">
+                <a href="http://tpgport.herokuapp.com/" class="btn">learn more</a>
+            </div>
+        </div>
+
+        
+    </div>
+    
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> <span> my </span> blogs </h1>
+
+    <div class="box-container">
+        
+        <div class="box tilt">
+            <img src="{% static 'img/enc2.jpg' %}" alt="">
+            <h3> Encryption & Decryption</h3>
+            <p>In this blog article, you will learn how to encrypt and decrypt files and strings using python and the cryptography python module</p>
+            <a href="http://theprotonblog.herokuapp.com/post_detail/encrypy-decrypt/" class="btn">learn more</a>
+        </div>
+
+        <div class="box tilt">
+            <img src="{% static 'img/span.jpg' %}" alt="">
+            <h3> Pytube Span Error </h3>
+            <p>The Pytube Libary Error. In this Article, you will learn how to fix the pytube python error: AttributeError: 'NoneType' object has no attribute 'span'.</p>
+            <a href="http://theprotonblog.herokuapp.com/post_detail/pytube-span-error/" class="btn">learn more</a>
+        </div>
+
+        <div class="box tilt">
+            <img src="{% static 'img/dj.jpg' %}" alt="">
+            <h3> Host Django App on Heroku </h3>
+            <p>Here, you will learn how to create a youtube downloader using python and the pytube python library!</p>
+            <a href="https://youtu.be/4NsDt5G8NDI" class="btn">learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blogs section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> contact <span> me </span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="{% static 'img/contact-img.svg' %}" alt="">
+        </div>
+
+        {% if messages %}
+            {%  for message in messages %}
+                <h1 class="heading">{{ message }}</h1>
+            {% endfor %}
+        {% endif %}
+
+        <form action="#contact" method="POST">{% csrf_token %}
+
+            <div class="inputBox">
+                <input type="text" placeholder="name" required name="name">
+                <input type="email" placeholder="email" required name="email">
+            </div>
+
+            <textarea placeholder="message" name="msg" id="" cols="30" rows="10" required></textarea>
+
+            <input type="submit" class="btn" value="send message">
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section  -->
+
+<div class="footer"> Adesola Ayodeji's <span> Portfolio </span> | 2022 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- javascript part  -->
+
+<!-- typed.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<!-- particles.js links  -->
+<script src="{% static 'js/particles.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+
+<!-- vanilla-tilt.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+let menu = document.querySelector('#menu-bars');
+let header = document.querySelector('header');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+};
+
+var typed = new Typed('.typing-text', {
+    strings : ['front end developer', 'web designer', 'graphic designer', 'web developer'],
+    loop : true,
+    typeSpeed : 150
+});
+
+VanillaTilt.init(document.querySelectorAll('.tilt'),{
+    max:25
+});
+
+</script>
+
+</body>
+</html>
